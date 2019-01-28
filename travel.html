@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Travel</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+    </head>
+    <body onload="currentSlide(1)">
+        <div class="center">
+        <div class="content"></div>
+        
+          <div class="textbar">
+              <nav>
+              <div class="svg-wrapper">
+                  <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="shape" height="40" width="150" />
+                    <div id="text">
+                      <a href="index.html"><span class="spot"></span>Home</a>
+                    </div>
+                  </svg>
+                </div>
+                <div class="svg-wrapper">
+                    <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="40" width="150" />
+                      <div id="text">
+                        <a href="about.html"><span class="spot"></span>About</a>
+                      </div>
+                    </svg>
+                  </div>
+                  <div class="svg-wrapper">
+                      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                        <rect id="shape" height="40" width="150" />
+                        <div id="text">
+                          <a href="resume.html"><span class="spot"></span>Resume</a>
+                        </div>
+                      </svg>
+                    </div>
+                    <div class="svg-wrapper">
+                        <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                          <rect id="shape" height="40" width="150" />
+                          <div id="text">
+                            <a href="travel.html"><span class="spot"></span>Travel</a>
+                          </div>
+                        </svg>
+                      </div>
+                      <div class="svg-wrapper">
+                          <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                            <rect id="shape" height="40" width="150" />
+                            <div id="text">
+                              <a href="contact.html"><span class="spot"></span>Contact</a>
+                            </div>
+                          </svg>
+                        </div>
+                        </nav>
+            
+        
+        
+        
+                    </div>
+                    <h1>Travel</h1>
+        </div>
+        <div class="bar"></div>
+<div class="content">
+        <div class="textbar">
+                <h4>One of my favorite things in life is travelling and experiencing different cultures.</h4>
+                <br>
+                <h4>In Winter 2018 I took my first international trip with my girlfriend. We visited the Great Wall of China, experienced the culture of Tokyo, Japan, went scuba diving in the Great Barrier Reef, saw the Sydney New Years Eve fireworks display, and cage dived with sharks in Port Lincoln, Australia.</h4>
+                </div>
+<div class="imgbar">
+        <!-- Slideshow container -->
+        <br><br>
+<div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="images/FLIGHT01.jpg" style="height:100%;width:100%;" class="rotateimg180">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/CH01.jpg" style="height:100%;width:100%;">
+        </div>
+
+        <div class="mySlides fade">
+                <img src="images/CH02.jpg" style="height:100%;width:100%;">
+              </div>
+
+        <div class="mySlides fade">
+          <img src="images/JP01.jpg" style="height:100%;width:100%;">
+        </div>
+
+        <div class="mySlides fade">
+                <img src="images/JP02.jpg" style="height:100%;width:100%;" class="rotateimg90">
+              </div>
+      
+        <div class="mySlides fade">
+          <img src="images/JP03.jpg" style="height:100%;width:100%;">
+        </div>      
+
+        <div class="mySlides fade">
+                <img src="images/AU01.jpg" style="height:100%;width:100%;">
+              </div>
+
+        <div class="mySlides fade">
+          <img src="images/AU02.jpg" style="height:100%;width:100%;" class="rotateimg90">
+        </div>
+
+        <div class="mySlides fade">
+                <img src="images/AU03.jpg" style="height:100%;width:100%;">
+              </div>
+
+        <div class="mySlides fade">
+          <img src="images/SHARK.jpg" style="height:100%;width:100%;" class="rotateimg90">
+        </div>
+
+        <div class="mySlides fade">
+                <img src="images/NYE.jpg" style="height:100%;width:100%;">
+              </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br><br>
+    </div>
+</div>
+<div class="bar"></div>
+
+
+
+
+
+
+
+    </body>
+</html>
