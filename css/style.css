@@ -59,6 +59,13 @@ h3 {
     width: auto;
     overflow: visible;
 }
+.content p{
+  margin: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: black;
+  text-align: left;
+}
 
 .text {
     vertical-align: top;
