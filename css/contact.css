@@ -46,16 +46,9 @@
           text-decoration: none;
       }
       
-      .button.twitter {
-        background: #00acee;
-      }
-      
-      .button.facebook {
-       background: #3b5998;
-      }
       
       .button.google-plus{
-        background: #db4a39;
+        background: #39dbd0;
       }
       
       .button.linkedin {
@@ -103,7 +96,7 @@
       }
       
       .button.stackexchange{
-        background: #ef8236;
+        background: #7436ef;
       }
       
       .button.flickr{
