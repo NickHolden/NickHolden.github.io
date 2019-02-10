@@ -1,0 +1,312 @@
+html {
+    padding: 0px;
+    border: 0px;
+    width: 100%;
+}
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: none;
+    background: #f2f2f2
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    margin-bottom: 24px;
+    margin-top: 40px;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    color: black;
+    text-align: center;
+}
+
+.bar {
+    color: black;
+    height: 1px;
+    padding: 1px;
+    border-width: 0px;
+    background:#b401ba;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-color: #b401ba;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+
+.content {
+    width: auto;
+    overflow: visible;
+}
+.content p{
+  margin: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: black;
+  text-align: left;
+}
+
+.text {
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 0%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 55%;
+}
+
+.imgbar {
+    display: inline-block;
+    margin-right: 0%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 30%;
+    margin-left: 8%;
+}
+.imgbar img {
+    display: initial;
+    margin: initial;
+    width: 75%;
+    border-color: #b401ba;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+}
+
+.content code {
+    display: block;
+    background-color: lightgray;
+    border-color: lightgray;
+    font-size: 20px;
+    border-radius: 32px;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 0px;
+}
+
+.content h4 {
+    margin: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    color: black;
+    text-align: left;
+}
+
+.imgbar p {
+    width: 75%;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: slateblue;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  .rotateimg180 {
+      -webkit-transform:rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+   .rotateimg90 {
+      -webkit-transform:rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+   } 
+   .picture {
+      border: 1px solid black;
+  }
+
+
+
+
+
+
+
+
+  /* Start of navigation button styling */
+  #bttn-group .bttn.current{
+    background-color: transparent; /* Transparent Background */
+    border: 1px dotted #b401ba; /* Purple Boarder */
+    color: black; /* Black Text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    box-sizing: border-box;
+
+}
+#bttn-group .bttn{
+  background-color: transparent; /* Transparent Background */
+  border: 1px dotted #b401ba; /* Purple Boarder */
+  color: black; /* Black Text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  box-sizing: border-box;
+}
+#bttn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.bttn {
+
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    position: sticky;
+    border: none;
+    background: #f2f2f2;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: light;
+    letter-spacing: 1px;
+    color: inherit;
+    transition: all 0.3s ease 0s;
+    outline:none;
+  }
+  .bttn:after{
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    z-index: -1;
+    background: #f2f2f2;
+    height: 0; left: 0; top: 0; right: 0;
+  }
+  .bttn:hover,
+  .bttn:focus{
+    color: black;
+    background-color: transparent;
+   }
+
+   .bttn:hover:after,
+   .bttn:focus:after{
+    background: #efa5f1;
+    height: 100%;
+   }
+  #bttn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  .current,
+  .current:after{
+    background-color:#f4dff5 !important;
+    color: black !important;
+  }
+
+
+  a.skip-main {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 25px;
+    background-color: grey;
+    color: #f2f2f2;
+    transform: translateY(-50px);
+}
+a.skip-main:focus, a.skip-main:active {
+ transform: translateY(0);
+}
