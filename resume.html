@@ -8,6 +8,18 @@
     <link type="text/css" rel="stylesheet" href="css/html5reset.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="images/ICON.png" />
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+    function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+    </script>
     <title>Resume</title>
 
 </head>
@@ -23,6 +35,8 @@
         <li class="current"><a href="resume.html">Resume</a></li>
         <li><a href="travel.html">Travel</a></li>
         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a></li>
     </ul>
     
 </nav>
