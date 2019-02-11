@@ -57,40 +57,6 @@ body, html {
     margin: 0px 10px;
     padding: 10px 10px;
 }
-.navRow > ul > li > a.icon {
-    display: none;
-}
-
-.navRow > ul > li > a:before, .navRow > ul > li > a:after {
-  position: absolute;
-  top: 0%;
-  width: 2px;
-  height: 100%;
-  background: #D7D9D7;
-  content: "";
-  opacity: 0;
-  transition: all 0.3s;
-}
-@media screen and (max-width: 600px) {
-  .navRow > ul > li a:not(:first-child) {display: none;}
-  .navRow > ul > li > a.icon {
-    float: right;
-    display: block;
-  }
-}
-@media screen and (max-width: 600px) {
-  .navRow > ul > li.responsive {position: relative;}
-  .navRow > ul > li.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navRow > ul > li.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
 
 .navRow > ul > li > a:before {
       left: 0px;
