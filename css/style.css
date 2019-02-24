@@ -24,7 +24,7 @@ footer {
 /* Navigation */
 
 .navRow {
-  overflow: scroll;
+  overflow: hidden;
   background-color: #6D6875;
   border-bottom: 1px solid #4c444d;
 }
@@ -99,6 +99,7 @@ footer {
 
 /* Content */
 .content {
+    height: 100%;
     width: 100%;
     overflow: scroll;
     background-color: #f2f2f2;
@@ -429,10 +430,11 @@ a.skip-main:focus, a.skip-main:active {
         display: none;
     }
     .image-container{
-        display: inline;
-        margin: 0 auto;
-        width: 100%;
+        display:inline;
+        margin: auto;
+    }
+    .image-container .img {
         height: 100%;
-        padding: 0 1rem;
+        max-width: 100%;
     }
 }
