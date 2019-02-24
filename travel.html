@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="css/html5reset.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="images/ICON.png" />
@@ -33,9 +34,9 @@
                   }
                   slides[slideIndex-1].style.display = "block";  
                   dots[slideIndex-1].className += " active";
-                }
+                }            
         </script>
-        
+        <script src="js/nav.js"></script>
     <title>Travel</title>
 
 </head>
@@ -43,35 +44,50 @@
 <body onload="currentSlide(1)">
 <header>
 <a class="skip-main" href="#main">Skip to main content</a>
-<nav class="navRow">
-    
-    <ul>
-        <li id='navLogo'><a href="index.html">Nick Holden</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li class="current"><a href="travel.html">Travel</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    
+<nav>
+    <div class="navRow" id="myTopnav">
+        <a href="index.html">Nick Holden</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="travel.html" class="current">Travel</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </div>
 </nav>
 </header>
+  
+  
    <main id="main">
           <div class="content">
+                        <h1>Travel</h1>
             <div class="text">
              <br /> <br />
-             <h1>Travel</h1>
               <p>One of my favorite things in life is travelling and experiencing different cultures.
               <br /> <br />
               In Winter 2018 I took my first international trip with my girlfriend. We visited the Great Wall of China, experienced the culture of Tokyo, Japan, went scuba diving in the Great Barrier Reef, saw the Sydney New Years Eve fireworks display, and cage dived with sharks in Port Lincoln, Australia.</p>
-              <br /> <br /><br /> <br /> <br />
+              <br /> <br /><br /> <br />
             </div>
+                                         <div class="image-container">                                                               <img src="images/FLIGHT01.jpg" alt="Aeroflot Russian Airlines Plane" style="height:100%;width:100%;">
+                                                           <img src="images/CH01.jpg" alt="Photo outside the Great Wall of China" style="height:100%;width:100%;">
+                  <img src="images/CH02.jpg" alt="Photo on the Great Wall of China" style="height:100%;width:100%;">
+                  <img src="images/JP01.jpg" alt="Photo at East Gardens of Imperial Palace in Tokyo, Japan" style="height:100%;width:100%;">
+                  <img src="images/JP03.jpg" alt="Photo in downtown Tokyo, Japan" style="height:100%;width:100%;">
+                  <img src="images/AU01.jpg" alt="Photo of Cairns, Australia shoreline" style="height:100%;width:100%;">
+                  <img src="images/AU02.jpg" alt="Photo petting a wild Koala" style="height:100%;width:100%;">
+                <img src="images/AU03.jpg" alt="Photo of wild Kangaroos" style="height:100%;width:100%;">
+                  <img src="images/NYE.jpg" alt="Photo of Sydney Harbor New Years Eve celebration" style="height:100%;width:100%;">
+
+                                         </div>
+                                         
           <!-- Slideshow container -->
             <div class="imgbar">
               <br><br><br><br>
               <div class="slideshow-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                  <img src="images/FLIGHT01.jpg" alt="Aeroflot Russian Airlines Plane" style="height:100%;width:100%;" class="rotateimg180">
+                  <img src="images/FLIGHT01.jpg" alt="Aeroflot Russian Airlines Plane" style="height:100%;width:100%;">
                 </div>
 
                 <div class="mySlides fade">
@@ -87,7 +103,7 @@
                 </div>
 
                 <div class="mySlides fade">
-                  <img src="images/JP02.jpg" alt="Photo playing video games in Tokyo, Japan mall" style="height:100%;width:100%;" class="rotateimg90">
+                  <img src="images/JP02.jpg" alt="Photo playing video games in Tokyo, Japan mall" style="height:100%;width:100%;">
                 </div>
                   
                 <div class="mySlides fade">
@@ -99,7 +115,7 @@
                 </div>
 
                 <div class="mySlides fade">
-                  <img src="images/AU02.jpg" alt="Photo petting a wild Koala" style="height:100%;width:100%;" class="rotateimg90">
+                  <img src="images/AU02.jpg" alt="Photo petting a wild Koala" style="height:100%;width:100%;">
                 </div>
 
                 <div class="mySlides fade">
@@ -110,17 +126,12 @@
                 <div class="mySlides fade">
                   <img src="images/NYE.jpg" alt="Photo of Sydney Harbor New Years Eve celebration" style="height:100%;width:100%;">
                 </div>
-                    <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
               </div>
             </div>
+
+            
             <br><br><br>
-            <div class="bar"></div> 
           </div>
       </main>
-    <div class="footer">
-    <footer><p>Nick Holden 2019</p></footer>
-</div>
     </body>
 </html>

@@ -11,6 +11,7 @@
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="images/ICON.png" />
     <link rel="stylesheet" href="css/contact.css">
+    <script src="js/nav.js"></script>
     <title>Contact</title>
 
 </head>
@@ -18,36 +19,33 @@
 <body>
 <header>
 <a class="skip-main" href="#main">Skip to main content</a>
-<nav class="navRow">
-    
-    <ul>
-        <li id='navLogo'><a href="index.html">Nick Holden</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="travel.html">Travel</a></li>
-        <li class="current"><a href="contact.html">Contact</a></li>
-    </ul>
-    
+<nav>
+    <div class="navRow" id="myTopnav">
+        <a href="index.html">Nick Holden</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="travel.html">Travel</a>
+        <a href="contact.html" class="current">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </div>
 </nav>
 </header>
 
 <main id="main">
         <div class="content">
-           <img src="images/CONTACT.svg" alt="Contact Image" class="center">
+           <img src="images/CONTACT.svg" class="center">
            <h1>Contact</h1>
             <p>You can find me on these platforms!</p>
             <br />
-        </div>
             <div class="container">
-              <a href="mailto:niholden@umich.edu" target="_blank" class="button google-plus"><span><i class="fa fa-envelope-o" aria-hidden="true"></i></span><p>Email</p></a>
-              <a href="https://github.com/nickholden" target="_blank" class="button github"><span><i class="fa fa-github" aria-hidden="true"></i></span><p>Github</p></a>
-              <a href="https://www.linkedin.com/in/nickolas-holden-ba0193116/" target="_blank" class="button linkedin"><span><i class="fa fa-linkedin" aria-hidden="true"></i></span><p>Linkedin</p></a>
-              <a href="https://gitlab.eecs.umich.edu/niholden" class="button stackexchange"><span><i class="fa fa-gitlab" aria-hidden="true"></i></span><p>Gitlab</p></a>         
+              <a href="mailto:niholden@umich.edu" target="_blank" class="button google-plus"><span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>Email</a>
+              <a href="https://github.com/nickholden" target="_blank" class="button github"><span><i class="fa fa-github" aria-hidden="true"></i></span>Github</a>
+              <a href="https://www.linkedin.com/in/nickolas-holden-ba0193116/" target="_blank" class="button linkedin"><span><i class="fa fa-linkedin" aria-hidden="true"></i></span>Linkedin</a>
+              <a href="https://gitlab.eecs.umich.edu/niholden" class="button stackexchange"><span><i class="fa fa-gitlab" aria-hidden="true"></i></span>Gitlab</a>         
             </div>
+        </div>
         </main>
-    <div class="footer">
-    <footer><p>Nick Holden 2019</p></footer>
-</div>
+
 
 </body>
 </html>
