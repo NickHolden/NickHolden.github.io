@@ -456,10 +456,7 @@ a.skip-main:focus, a.skip-main:active {
         display: inline;
         font-size: .9em;
     }
-    .content .resumeimg {
-        display: none;
-    }
-    nav, .imgbar, .image-container{
+    nav, .imgbar, .image-container, .content .resumebar, .content .contact-img{
         display: none;
     }
 
