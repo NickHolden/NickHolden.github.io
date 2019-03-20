@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+        function upDate(previewPic){
+            pictureSrc = previewPic.src;
+            pictureAlt = previewPic.alt;
+            var myElement = document.querySelector("#image");
+            myElement.style.backgroundImage = 'url('+pictureSrc+')';
+            myElement.innerHTML = pictureAlt;
+            myElement.width = "auto";
+            
+	}
+
+	function unDo(){
+        var myElement = document.querySelector("#image");
+        myElement.style.backgroundImage = 'url()';
+        myElement.innerHTML = "Hover or tab over/into an image below.";
+	}
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "imgs/AU01.jpg" 
+            alt = "Cairns Coastline"
+            onmouseover="upDate(this)"
+            onmouseout=unDo()
+            onfocus="upDate(this)"
+            blur="unDo()">
+    
+        <img class = "preview" tabindex = "2" 
+            src = "imgs/AU02.jpg" 
+            alt = "Petting a wild koala"
+            onmouseover="upDate(this)"
+            onmouseout=unDo()
+            onfocus="upDate(this)"
+            blur="unDo()">    
+    
+        <img class = "preview" tabindex = "3" 
+            src = "imgs/AU03.jpg" 
+            alt = "Wild Kangaroos"
+            onmouseover="upDate(this)"
+            onmouseout=unDo()
+            onfocus="upDate(this)"
+            blur="unDo()">    
+    
+        <img class = "preview" tabindex = "4" 
+            src = "imgs/AU04.jpg" 
+            alt = "Feeding Wallabies"
+            onmouseover="upDate(this)"
+            onmouseout=unDo()
+            onfocus="upDate(this)"
+            blur="unDo()">    
+    
+        <img class = "preview" tabindex = "5" 
+            src = "imgs/AU05.jpg" 
+            alt = "Wild gecko"
+            onmouseover="upDate(this)"
+            onmouseout=unDo()
+            onfocus="upDate(this)"
+            blur="unDo()">   
+        <img class = "preview" tabindex = "6" 
+            src = "imgs/CH01.jpg" 
+            alt = "Great Wall of china"
+            onmouseover="upDate(this)"
+            onmouseout=unDo()
+            onfocus="upDate(this)"
+            blur="unDo()">
+</body>
+</html>
+    

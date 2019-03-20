@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Challenges</title>
+<!-- Step 1: Add some plain old CSS style so that the "emailfield" paragraph isn't displayed when the page first loads.  You can use the CSS 'display' property. Test to make sure this works.
+
+Step 2: Create a new function called toggleEmail() that simply displays an message to the console, e.g. console.log("Yep, my function is being called"); 
+
+Step 3: Add an event so that when the checkbox is clicked your function is called and test that it works! 
+
+Step 4: Display the email fields
+Now add code so that our function actually does something useful! Using JavaScript, make the emailfield paragraph appear when the checkbox is clicked.  You will probably want to change the display property.
+
+Step 4: Enable toggling.
+When you test your form at the moment, you'll notice that you can click on the checkbox and the email field displays, but when you un-check the checkbox the extra paragraph doesn't hide itself again!  Use the "checked" property to test whether a checkbox was checked.  Then use an if statement to toggle the emailfield appear and disappear as appropriate.
+-->
+
+
+    <style>
+    /*    YOUR CSS CODE HERE */
+        #emailfield {
+            display: none;
+        }
+    </style>
+    
+    <script>
+	function toggleEmail(){
+		/*    YOUR JavaScript CODE HERE */ 
+        
+        var myElement = document.querySelector("#emailfield");
+        var checkBox = document.querySelector("#subscribe");
+        
+        if(checkBox.checked == true){
+            myElement.style.display = "flex";
+        }
+        else {
+            myElement.style.display = "none";
+        }
+
+	} 
+    </script>
+  </head>
+  <body>
+    <h1>Challenge One</h1>
+    <!-- UPDATE THE ACTION -->
+    <form action="/challenge2.html">
+      <fieldset>
+        <legend>Email subscriptions</legend>
+        <div id="check">
+          <label>
+            <input type="checkbox" name="subscribe" id="subscribe" onchange="toggleEmail()">
+            Check to toggle the email field.
+          </label>
+        </div>
+
+        <div id="emailfield">
+          <label>
+            Email Address: 
+            <input type="text" name="email" id="email">
+          </label>
+        </div>
+
+        <input type = "submit" value = "Go To Challenge 2">
+      </fieldset>
+    </form>
+  </body>
+</html>
