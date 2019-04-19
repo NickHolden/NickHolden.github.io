@@ -392,3 +392,10 @@ a.skip-main {
 a.skip-main:focus, a.skip-main:active {
  transform: translateY(0);
 }
+.screen-reader{
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
