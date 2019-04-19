@@ -21,7 +21,7 @@
 				<a href="resume.html" class="current">Resume</a>
 				<a href="travel.html">Travel</a>
 				<a href="contact.html">Contact</a>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()"><div class="screen-reader">-</div><i class="fa fa-bars"></i></a>
 			</div>
 		</nav>
 	</header>
@@ -37,23 +37,24 @@
 				</div>
 			</div>
 		</main-content>
-		<aside>
+    <div class="side">
 			<a download="resume.pdf" href="docs/resume.pdf" title="ImageName">
 				<div class=image-container>
+        
 					<div class="flip">
 						<div class="flip-inner">
 							<div class="flip-front">
-								<img src="images/RESUME.svg" alt="Resume" style="width:400px; height:400px;">
+              <img src="images/RESUME.svg" alt="Resume" style="width:400px; height:400px;">
 							</div>
 							<div class="flip-back">
-								<div>Click to download my resume!</div>
+								<div class="text">Click to download my resume!</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</a>
-		</aside>
-	</main>
+		</div>
+    </main>
 </body>
 
 </html>
