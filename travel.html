@@ -1,137 +1,244 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="css/html5reset.css" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="images/ICON.png" />
-        <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
-                
-                function plusSlides(n) {
-                  showSlides(slideIndex += n);
-                }
-                
-                function currentSlide(n) {
-                  showSlides(slideIndex = n);
-                }
-                function showSlides(n) {
-                  var i;
-                  var slides = document.getElementsByClassName("mySlides");
-                  var dots = document.getElementsByClassName("dot");
-                  if (n > slides.length) {slideIndex = 1}    
-                  if (n < 1) {slideIndex = slides.length}
-                  for (i = 0; i < slides.length; i++) {
-                      slides[i].style.display = "none";  
-                  }
-                  for (i = 0; i < dots.length; i++) {
-                      dots[i].className = dots[i].className.replace(" active", "");
-                  }
-                  slides[slideIndex-1].style.display = "block";  
-                  dots[slideIndex-1].className += " active";
-                }            
-        </script>
-        <script src="js/nav.js"></script>
-    <title>Travel</title>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="css/html5reset.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<link rel="icon" href="images/ICON.png" />
+	<script src="js/nav.js"></script>
+	<title>Travel</title>
 </head>
 
-<body onload="currentSlide(1)">
-<header>
-<a class="skip-main" href="#main">Skip to main content</a>
-<nav>
-    <div class="navRow" id="myTopnav">
-        <a href="index.html">Nick Holden</a>
-        <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="travel.html" class="current">Travel</a>
-        <a href="contact.html">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-    </div>
-</nav>
-</header>
-  
-  
-   <main id="main">
-          <div class="content">
-                        <h1>Travel</h1>
-            <div class="text">
-             <br /> <br />
-              <p>One of my favorite things in life is travelling and experiencing different cultures.
-              <br /> <br />
-              In Winter 2018 I took my first international trip with my girlfriend. We visited the Great Wall of China, experienced the culture of Tokyo, Japan, went scuba diving in the Great Barrier Reef, saw the Sydney New Years Eve fireworks display, and cage dived with sharks in Port Lincoln, Australia.</p>
-              <br /> <br /><br /> <br />
-            </div>
-                                         <div class="image-container">                                                               <br><img src="images/FLIGHT01.jpg" alt="Aeroflot Russian Airlines Plane" style="width:100%">
-                                                           <img src="images/CH01.jpg" alt="Photo outside the Great Wall of China" style="width:100%;">
-                  <img src="images/CH02.jpg" alt="Photo on the Great Wall of China" style="width:100%;">
-                  <img src="images/JP01.jpg" alt="Photo at East Gardens of Imperial Palace in Tokyo, Japan" style="width:100%;">
-                  <img src="images/JP03.jpg" alt="Photo in downtown Tokyo, Japan" style="width:100%;">
-                  <img src="images/AU01.jpg" alt="Photo of Cairns, Australia shoreline" style="width:100%;">
-                  <img src="images/AU02.jpg" alt="Photo petting a wild Koala" style="width:100%;">
-                <img src="images/AU03.jpg" alt="Photo of wild Kangaroos" style="width:100%;">
-                  <img src="images/NYE.jpg" alt="Photo of Sydney Harbor New Years Eve celebration" style="width:100%;">
+<body>
+	<header>
+		<nav>
+			<div class="navRow" id="myTopnav"> <a href="index.html">Nick Holden</a>
+				<a href="about.html">About</a>
+				<a href="resume.html">Resume</a>
+				<a href="travel.html" class="current">Travel</a>
+				<a href="contact.html">Contact</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+			</div>
+		</nav>
+	</header>
+	<div id="main">
+		<main-content>
+			<p>In Winter 2018 I took my first international trip with my girlfriend. We visited the Great Wall of China, experienced the culture of Tokyo, Japan, went scuba diving in the Great Barrier Reef, saw the Sydney New Years Eve fireworks display, and cage dived with sharks in Port Lincoln, Australia.</p>
+			<!-- Trigger/Open The Modal -->
+			<div class="center">
+				<button id="penguinBtn">Videos</button>
+			</div>
+			<!-- The Modal -->
+			<div id="penguinModal" class="modal">
+				<!-- Modal content -->
+				<div id="modal-content"> <span class="close">&times;</span>
+					<button onclick="penguinButton()">Penguin March</button>
+					<button onclick="sharkButton()">Great White Shark</button>
+					<button onclick="fireworkButton()">Sydney NYE Fireworks</button>
+					<br>
+					<br>
+					<video id="video1" height="600"></video>
+					<br>
+					<br>
+					<button onclick="playPause()">Play/Pause</button>
+				</div>
+			</div>
+			<div class="mobile-display">
+				<br>
+				<img src="images/FLIGHT01.jpg" alt="Flying to Moscow, Russia" style="width:100%;">
+				<img src="images/AU01.jpg" alt="Cairns, Australia" style="width:100%;">
+				<img src="images/AU03.jpg" alt="Kangaroos on Kangaroo Island!" style="width:100%;">
+				<img src="images/AU04.jpg" alt="Feeding Wallabies outside of our hotel" style="width:100%;">
+				<img src="images/NYE.jpg" alt="Sydney NYE Fireworks" style="width:100%;">
+				<img src="images/CH01.jpg" alt="Outside of the Great Wall of China" style="width:100%;">
+				<img src="images/CH02.jpg" alt="On the Great Wall of China" style="width:100%;">
+				<img src="images/CH03.jpg" alt="Entrance to the Great Wall of China" style="width:100%;">
+				<img src="images/JP01.jpg" alt="East Gardens of the Imperial Palace - Tokyo, Japan" style="width:100%;">
+				<img src="images/JP03.jpg" alt="Tokyo, Japan" style="width:100%;">
+			</div>
+		</main-content>
+		<aside>
+			<br>
+			<div class="center"> <span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+				<span class="dot" onclick="currentSlide(5)"></span>
+				<span class="dot" onclick="currentSlide(6)"></span>
+				<span class="dot" onclick="currentSlide(7)"></span>
+				<span class="dot" onclick="currentSlide(8)"></span>
+				<span class="dot" onclick="currentSlide(9)"></span>
+				<span class="dot" onclick="currentSlide(10)"></span>
+			</div>
+			<div class="carousel-container">
+				<div class="slides fade">
+					<div class="slide-number">1 / 10</div>
+					<img src="images/FLIGHT01.jpg" alt="Flying to Moscow, Russia" style="width:100%;">
+					<div class="text">Flying to Moscow, Russia</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">2 / 10</div>
+					<img src="images/AU01.jpg" alt="Cairns, Australia" style="width:100%;">
+					<div class="text">Cairns, Australia</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">3 / 10</div>
+					<img src="images/AU03.jpg" alt="Kangaroos on Kangaroo Island!" style="width:100%;">
+					<div class="text">Kangaroos on Kangaroo Island!</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">4 / 10</div>
+					<img src="images/AU04.jpg" alt="Feeding Wallabies outside of our hotel" style="width:100%;">
+					<div class="text">Feeding Wallabies outside of our hotel</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">5 / 10</div>
+					<img src="images/NYE.jpg" alt="Sydney NYE Fireworks" style="width:100%;">
+					<div class="text">Sydney NYE Fireworks</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">6 / 10</div>
+					<img src="images/CH01.jpg" alt="Outside of the Great Wall of China" style="width:100%;">
+					<div class="text">Outside of the Great Wall of China</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">7 / 10</div>
+					<img src="images/CH02.jpg" alt="On the Great Wall of China" style="width:100%;">
+					<div class="text">On the Great Wall of China</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">8 / 10</div>
+					<img src="images/CH03.jpg" alt="Entrance to the Great Wall of China" style="width:100%;">
+					<div class="text">Entrance to Great Wall of China</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">9 / 10</div>
+					<img src="images/JP01.jpg" alt="East Gardens of the Imperial Palace - Tokyo, Japan" style="width:100%;">
+					<div class="text">East Gardens of the Imperial Palace in Tokyo, Japan</div>
+				</div>
+				<div class="slides fade">
+					<div class="slide-number">10 / 10</div>
+					<img src="images/JP03.jpg" alt="Tokyo, Japan" style="width:100%;">
+					<div class="text">Tokyo, Japan</div>
+				</div> <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+		</aside>
+	</div>
+	<script>
+		var slideIndex = 1;
+		        showSlides(slideIndex);
+		
+		        function plusSlides(n) {
+		            showSlides(slideIndex += n);
+		        }
+		
+		        function currentSlide(n) {
+		            showSlides(slideIndex = n);
+		        }
+		
+		        function showSlides(n) {
+		            var i;
+		            var slides = document.getElementsByClassName("slides");
+		            var dots = document.getElementsByClassName("dot");
+		            if (n > slides.length) {
+		                slideIndex = 1
+		            }
+		            if (n < 1) {
+		                slideIndex = slides.length
+		            }
+		            for (i = 0; i < slides.length; i++) {
+		                slides[i].style.display = "none";
+		            }
+		            for (i = 0; i < dots.length; i++) {
+		                dots[i].className = dots[i].className.replace(" active", "");
+		            }
+		            slides[slideIndex - 1].style.display = "block";
+		            dots[slideIndex - 1].className += " active";
+		        }
+	</script>
+	<script>
+		// Get the modal
+		        var modal = document.getElementById('penguinModal');
+		
+		        // Get the button that opens the modal
+		        var btn = document.getElementById("penguinBtn");
+		
+		        // Get the <span> element that closes the modal
+		        var span = document.getElementsByClassName("close")[0];
+		
+		        var myVideo = document.getElementById("video1");
+		
+		        // When the user clicks the button, open the modal 
+		        btn.onclick = function() {
+		            modal.style.display = "block";
+		        }
+		
+		        // When the user clicks on <span> (x), close the modal
+		        span.onclick = function() {
+		            var myVideo = document.getElementById("video1");
+		            myVideo.pause();
+		            myVideo.currentTime = 0;
+		            modal.style.display = "none";
+                myVideo.style.display = "none";
+		        }
+		
+		        // When the user clicks anywhere outside of the modal, close it
+		        window.onclick = function(event) {
+		            if (event.target == modal) {
+		                var myVideo = document.getElementById("video1");
+		                myVideo.pause();
+		                myVideo.currentTime = 0;
+		                modal.style.display = "none";
+                    myVideo.style.display = "none";
+		            }
+		        }
+	</script>
+	<script>
+		var myVideo = document.getElementById("video1");
+		        var videoList = ['web-penguin.mp4', 'web-shark.mp4', 'web-firework.mp4'];
+		        var index = videoList.indexOf(window.currentVideoName);
+		        //Next button
+		        function sharkButton() {
+		            myVideo.style.display = "inline";
+		            myVideo.pause();
+		            myVideo.currentTime = 0;
+		            index = 1;
+		            myVideo.src = 'images/' + videoList[index];
+		            window.currentVideoName = videoList[index];
+		            myVideo.play();
+		        }
+		
+		        function fireworkButton() {
+		            myVideo.style.display = "inline";
+		            myVideo.pause();
+		            myVideo.currentTime = 0;
+		            index = 2;
+		            myVideo.src = 'images/' + videoList[index];
+		            window.currentVideoName = videoList[index];
+		            myVideo.play();
+		        }
+		
+		        function penguinButton() {
+		            myVideo.style.display = "inline";
+		            myVideo.pause();
+		            myVideo.currentTime = 0;
+		            index = 0;
+		            myVideo.src = 'images/' + videoList[index];
+		            window.currentVideoName = videoList[index];
+		            myVideo.play();
+		        }
+		
+		        function playPause() {
+		            if (myVideo.paused)
+		                myVideo.play();
+		            else
+		                myVideo.pause();
+		        }
+	</script>
+</body>
 
-                                         </div>
-                                         
-          <!-- Slideshow container -->
-            <div class="imgbar">
-              <br><br><br><br>
-              <div class="slideshow-container">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                  <img src="images/FLIGHT01.jpg" alt="Aeroflot Russian Airlines Plane" style="height:100%;width:100%;">
-                </div>
-
-                <div class="mySlides fade">
-                  <img src="images/CH01.jpg" alt="Photo outside the Great Wall of China" style="height:100%;width:100%;">
-                </div>
-
-                <div class="mySlides fade">
-                  <img src="images/CH02.jpg" alt="Photo on the Great Wall of China" style="height:100%;width:100%;">
-                </div>
-
-                <div class="mySlides fade">
-                  <img src="images/JP01.jpg" alt="Photo at East Gardens of Imperial Palace in Tokyo, Japan" style="height:100%;width:100%;">
-                </div>
-
-                <div class="mySlides fade">
-                  <img src="images/JP02.jpg" alt="Photo playing video games in Tokyo, Japan mall" style="height:100%;width:100%;">
-                </div>
-                  
-                <div class="mySlides fade">
-                  <img src="images/JP03.jpg" alt="Photo in downtown Tokyo, Japan" style="height:100%;width:100%;">
-                </div>      
-
-                <div class="mySlides fade">
-                  <img src="images/AU01.jpg" alt="Photo of Cairns, Australia shoreline" style="height:100%;width:100%;">
-                </div>
-
-                <div class="mySlides fade">
-                  <img src="images/AU02.jpg" alt="Photo petting a wild Koala" style="height:100%;width:100%;">
-                </div>
-
-                <div class="mySlides fade">
-                <img src="images/AU03.jpg" alt="Photo of wild Kangaroos" style="height:100%;width:100%;">
-                </div>
-
-
-                <div class="mySlides fade">
-                  <img src="images/NYE.jpg" alt="Photo of Sydney Harbor New Years Eve celebration" style="height:100%;width:100%;">
-                </div>
-              </div>
-            </div>
-
-            
-            <br><br><br>
-          </div>
-      </main>
-    </body>
 </html>
