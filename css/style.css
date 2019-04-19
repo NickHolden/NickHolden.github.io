@@ -344,7 +344,7 @@
 	.mobile-display .image-container {
 		padding: 5%;
 	}
-	side {
+	.side {
 		display: none;
 	}
 }
