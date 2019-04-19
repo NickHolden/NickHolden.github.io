@@ -379,3 +379,16 @@ video {
 		content: url(http://chart.apis.google.com/chart?chs=120x120&cht=qr&chl=https://nickholden.github.io/);
 	}
 }
+a.skip-main {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 20px;
+    background-color: grey;
+    color: #f2f2f2;
+    transform: translateY(-100px);
+}
+a.skip-main:focus, a.skip-main:active {
+ transform: translateY(0);
+}
